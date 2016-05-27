@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Contact List App</title>
+
+	<!-- Angular -->
+	<script src="./libs/angular/angular.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="./libs/bootstrap/dist/css/bootstrap-theme.min.css">
+
+	<!-- Controllers -->
+	<script src="./controllers/controller.js"></script>
+
+</head>
+
+<body>
+	<div class="container" ng-controller="AppCtrl">
+		<h1>Contact List App</h1>
+		<input ng-model="test">
+		{{greeting}} {{test}}
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Number</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<td><input class="form-control" ng-model="contact.name"></td>
+					<td><input class="form-control" ng-model="contact.email"></td>
+					<td><input class="form-control" ng-model="contact.number"></td>
+					<td><button class="btn btn-primary" ng-click="addContact()">Add Contact</button></td>
+				</tr>
+				<tr ng-repeat="contact in contactList">
+					<td>{{contact.name}}</td>
+					<td>{{contact.email}}</td>
+					<td>{{contact.number}}</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+
+</body>
+</html>

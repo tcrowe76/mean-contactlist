@@ -1,0 +1,22 @@
+{
+  "name": "mean-tut",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "tcrowe76 <tcrowe76@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6"
+  }
+}
